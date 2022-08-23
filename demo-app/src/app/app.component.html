@@ -1,0 +1,83 @@
+<!-- Demo-1 and Demo-2 -->
+<h1>Demo-1 and Demo-2 Interpolation</h1>
+<h1> hello world welcome to ANGULAR apps</h1>
+<p> hello {{name}}</p>
+{{10+20}}
+<br>
+sum of {{nums1}} and {{nums2}} is = {{nums1 + nums2}}
+
+<!-- Demo-3 -->
+<h1>Demo-3</h1>
+<button (click)="sum()"> click me </button>
+sum of 2 nums is {{sums}}
+<button (dblclick)="sum()">dbl click me </button>
+<button (mouseenter)="sum()">mouse click me </button>
+
+<!-- Demo-4 -->
+<h1>Demo-4</h1>
+<input type="text" value="hello">
+<input type="text" value="names">
+<input type="text" [value]="names">
+<br>
+<input [type]="type" value="hello world">
+<!-- <input type="password" value="hello world"> -->
+<button (click)="changeVal()"> hide password </button>
+
+<!-- Demo-5 -->
+<h1>Session-1 Demo-5 and Demo-6</h1>
+<input [type]="textype"  value="hello">
+<button type="button" name="button" (click)="changeValue()">{{btname}} Password</button>
+
+
+<h1>Demo-7 Problem with one way data Binding</h1>
+<input type="text" [value]="myvar">
+<button (click)="disp()"> click me </button>
+
+
+<h1>Demo-8 </h1>
+<input type="text" [(ngModel)]="myvar">
+<button (click)="disp()"> click me </button>
+{{myvar}}
+
+
+<h1>Demo-9</h1>
+<input type="text" [(ngModel)]="num1">
+<input type="text" [(ngModel)]="num2">
+<button (click)="display()"> click me </button>
+{{sumvar}}
+
+
+<h1>Demo-10</h1>
+<input type="text" [(ngModel)]="num1">
+<input type="text" [(ngModel)]="num2">
+<button (click)="display10()"> click me </button>
+{{sumvar}}
+
+
+<h1>Demo-11 Style Binding</h1>
+<!-- HTML STYLE USING CSS -->
+<p style="background-color:green ;"> this is green p tag </p>
+<!-- style binding -->
+<p [style.background-color]="pclr"> this is coloured p tag </p>
+
+
+<h1>Demo-12 style binding</h1>
+<input type="number" [(ngModel)]="age">
+<button (click)="chkStatus()">  submit </button>
+<p *ngIf="status" [style.background-color]="pclg">  you are {{status}} for the job </p>
+
+
+<h1>Demo-13</h1>
+<!-- This method of style binding is sutable when les property needs to be aplied -->
+<p [style.background-color]="pclgg" [style.color]="textclr">  you are eligible for the job </p>
+<!-- This is simple HTML-CSS styling -->
+<p style="background-color: red; color: white;">  you are eligible for the job </p>
+<!-- Ng style is suggested to use when multiple property needs to apply  -->
+<p [ngStyle]="{'background-color': pclgg,'color':textclr}">  you are eligible for the job </p>
+
+
+<h1>Assignment-1 Angular</h1>
+<p  [style.font-size.px]="'30'" >  you are eligible for the job </p>
+<p [ngStyle]="{'font-size.px': varysize}"> Font Property </p>
+<button type="button" name="button" (click)="increasefont()">+</button>
+<button type="button" name="button" (click)="decreasefont()">-</button>

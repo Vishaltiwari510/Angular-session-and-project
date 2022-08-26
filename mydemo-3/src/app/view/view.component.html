@@ -1,0 +1,38 @@
+
+
+
+<table class="table"> 
+    <thead>
+    <tr> 
+
+        <th> Name </th>
+        <th> Model </th>
+        <th> Maker </th>
+        <th> Colour </th>
+        <th> Transmission </th>
+        <th> Action </th>
+    </tr>
+</thead>
+
+    <tbody>
+    <tr *ngFor="let car of cars"> 
+       
+        <td> {{car.name}} </td>
+        <td> {{car.model}} </td>
+        <td> {{car.maker}} </td>
+        <td> {{car.colour}} </td>
+        <td> {{car.transmissionType}} </td>
+         
+        <td><button class="btn btn-danger" (click)="deleteCar(car)" > 
+            <i class="glyphicon glyphicon-trash"></i>
+            
+        </button>
+       
+        </td>
+
+    </tr>
+</tbody>
+
+</table>
+
+<button mat-raised-button color="primary" class="hover-class" routerLink="/login">LogOut</button>

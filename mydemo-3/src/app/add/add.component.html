@@ -1,0 +1,113 @@
+<!-- <p>add works!</p>
+
+<table>
+
+<tr>
+<td>
+<label> Name </label>
+</td>
+<td >
+<input type="text" [(ngModel)]="car.name">
+</td>
+</tr>
+
+
+
+    <tr>
+    <td>
+    <label> Model </label>
+    </td>
+    <td >
+    <input type="text" [(ngModel)]="car.model">
+    </td>
+    </tr>
+
+        <tr>
+        <td>
+        <label> Maker </label>
+        </td>
+        <td >
+        <input type="text" [(ngModel)]="car.maker">
+        </td>
+        </tr>
+
+
+        <tr>
+            <td>
+            <label> colour </label>
+            </td>
+            <td >
+            <input type="text" [(ngModel)]="car.colour">
+            </td>
+            </tr>
+
+            <tr>
+                <td>
+                <label> Transmission Type </label>
+                </td>
+                <td >
+                <input type="text" [(ngModel)]="car.transmissionType">
+                </td>
+                </tr>
+
+                    <tr>
+                    <td>
+
+                    </td>
+                    <td >
+                   <button (click)="addCar()"> add car</button>
+                    </td>
+                    </tr>
+
+
+</table> -->
+<mat-card class="example-card">
+  
+<form>
+    <h1 class="addcarheading">Add Car</h1>
+    <div class="form-group">
+      <label >Car Name</label>
+      <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Enter Name" [(ngModel)]="car.name" [ngModelOptions]="{standalone: true}">
+    </div>
+    <br>
+    
+    <div class="form-group">
+      <label >Model</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="model" [(ngModel)]="car.model" [ngModelOptions]="{standalone: true}">
+    </div>
+    <br>
+    
+    <div class="form-group">
+        <label>Maker</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Maker" [(ngModel)]="car.maker" [ngModelOptions]="{standalone: true}">
+      </div>
+      <br>
+    
+      <div class="form-group">
+        <label>Color</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="color" [(ngModel)]="car.colour" [ngModelOptions]="{standalone: true}">
+      </div>
+      <br>
+    
+      <div class="form-group">
+        <label>Transmission Type</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Transmission Type" [(ngModel)]="car.transmissionType" [ngModelOptions]="{standalone: true}">
+      </div>
+      <br>
+     
+      
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  <br>
+  
+ 
+   
+        <button type="submit" class="btn btn-primary" (click)="addCar()" routerLink="/viewcar"> Add car</button>
+        
+        <button mat-raised-button color="primary" class="hover-class" routerLink="/login">LogOut</button>
+</div>
+
+  </form>
+</mat-card>
+  

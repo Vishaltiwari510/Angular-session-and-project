@@ -1,0 +1,32 @@
+<table width="80%" border="2px">
+
+
+  <tr> 
+<td> Id </td>
+<td> Name </td>
+<td> Maker </td>
+<td> Colour </td>
+
+  </tr>
+
+
+
+  <tr *ngFor="let car of cars"> 
+    <td> {{car.id}} </td>
+    <td> {{car.name}} </td>
+    <td> {{car.maker}} </td>
+    <td> {{car.color}} </td>
+    <td> <button (click)="deleteCar(car.id)"> delete </button> </td>
+    
+      </tr>
+
+</table>  
+
+<P> add car </P>
+
+<input type="text" [(ngModel)]="car.id" placeholder="id">
+<input type="text" [(ngModel)]="car.name" placeholder="name">
+<input type="text" [(ngModel)]="car.maker" placeholder="maker">
+<input type="text" [(ngModel)]="car.color" placeholder="colour">
+
+<button (click)="addCar()"> add car </button>

@@ -9,12 +9,12 @@
 <br>
 {{name}}
 
-<br> 
+<br>
 
 {{money}}
 
 
-<br> 
+<br>
 
 {{money|currency}}
 
@@ -24,7 +24,7 @@
 <br>
 <p> add 15$ to existing vars</p>
 
-<br> 
+<br>
 
 {{money+15|currency}}
 
@@ -73,7 +73,57 @@
 {{'hello'|uppercase}}
 <br>
 <br><br>
-{{'hello'|testpipe}}
+{{'hello'|testpipe:'U'}}
 
-{{'new val'|testpipe}}
+{{'new val'|testpipe:'L'}}
 
+
+<h1>Demo-4</h1>
+<p>  add student  </p>
+<label> roll no</label>
+<input type="text" [(ngModel)]="student.rollNo" >
+
+
+<label> gender </label>
+<input type="text" [(ngModel)]="student.gender" >
+
+<label> sem</label>
+<input type="text" [(ngModel)]="student.sem" >
+
+<label> name</label>
+<input type="text" [(ngModel)]="student.name" >
+
+<label> marks</label>
+<input type="text" [(ngModel)]="student.marks" >
+
+
+<button (click)="addStudent(student)"> add </button>
+
+
+<p>  result   </p>
+
+<table>
+
+    <tr>
+        <td> Roll no </td>
+        <td> Gender </td>
+        <td> Name </td>
+        <td> Marks </td>
+        <td> Sem </td>
+
+    </tr>
+
+
+    <tr *ngFor="let student of students">
+        <td> {{student.rollNo}} </td>
+        <td> {{student.gender}} </td>
+        <td> {{marriage()?  (student.name| gender:student.gender) :(student.name| maritalStatus:student.maritalStatus)}} </td>
+        <td> {{student.marks}} </td>
+        <td> {{student.sem}} </td>
+        <td>{{student.maritalStatus}}</td>
+
+
+    </tr>
+
+
+</table>

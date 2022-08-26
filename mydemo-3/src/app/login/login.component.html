@@ -1,0 +1,49 @@
+
+
+
+
+
+
+
+  
+
+  
+<div class="login-block">
+<mat-card class="example-card">
+<mat-card-title>Login</mat-card-title>
+<br>
+<div class="example-container">
+
+<mat-form-field appearance="fill">
+  
+  <mat-label class="label-class">Email</mat-label>
+  <input matInput placeholder="pat@example.com" [formControl]="email" required>
+  <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+</mat-form-field>
+</div>
+<br>
+<div class="example-container">
+
+<mat-form-field appearance="fill">
+  <mat-label class="label-class">Password</mat-label>
+  <input matInput [type]="hide ? 'password' : 'text'" autocomplete="on"> 
+  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+  </button>
+</mat-form-field>
+</div>
+<section>
+  <div class="example-label"></div>
+  <div class="example-button-row">
+    <button mat-raised-button color="primary" class="hover-class" (click)="buttonClickDashboard()">Log in</button>
+    
+    <button mat-raised-button color="primary" class="hover-class" routerLink="/register">Register</button>
+    <div class="tip">Did Not register yet?</div>
+  </div>
+</section>
+</mat-card>
+</div>
+
+
+
+ 

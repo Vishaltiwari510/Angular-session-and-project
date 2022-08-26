@@ -1,0 +1,24 @@
+.form-group{
+    width:50%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.example-card{
+    background-color: darkgrey;
+    width: 50%;
+   margin-left: 500px;
+   margin-bottom: 200px;
+    width: 40%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 50px;
+}
+
+.hover-class{
+   float: right;
+}
+button.mat-raised-button:hover {
+    background-color: rgb(111, 0, 255);    
+}

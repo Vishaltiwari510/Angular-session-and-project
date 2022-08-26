@@ -1,0 +1,26 @@
+.table{
+    width: 50%;
+    margin: 0px auto;
+    float: none;
+    margin-top: 50px;
+}
+
+.hover-class{
+   margin-left: 700px;
+   margin-top: 100px;;
+ 
+ }
+ button.mat-raised-button:hover {
+     background-color: rgb(111, 0, 255); 
+      
+       
+ }
+
+ .table{
+    background-color: lightblue;
+    border-radius: 10px;
+    border-width: 10px;
+   
+ }
+
+ 

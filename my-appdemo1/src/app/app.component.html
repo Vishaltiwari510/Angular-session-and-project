@@ -3,61 +3,349 @@
 <input type="text" [(ngModel)]="age">
 
 <!-- ng if directive -->
-<p *ngIf="age >= 18 && age <= 50 ; else myelsBlock"  [style.background-color]="epclr">  you are eligible for the job </p> 
+<p *ngIf="age >= 18 && age <= 50 ; else myelsBlock"  [style.background-color]="epclr">  you are eligible for the job </p>
 
  <!-- else implementation using ng-template -->
 <ng-template #myelsBlock>
-<p  [style.background-color]="nepclr">  you are not eligible for the job </p> 
+<p  [style.background-color]="nepclr">  you are not eligible for the job </p>
 </ng-template>
 
 <!-- Demo 2 - Topic - Ng For for iterating array in dropdown -->
 <h1>DEMO2</h1>
 <!-- making droipdown using ng-for usage -->
  <!-- select tag is used for dropdown -->
-<select>  
-  <option *ngFor="let state of states"> {{state}} </option> 
+<select>
+  <option *ngFor="let state of states"> {{state}} </option>
   </select>
-  
+
   <!-- unordered list of states -->
-  <ul> 
+  <ul>
   <li *ngFor="let state of states"> {{state}} </li>
   </ul>
-  
-  
+
+
   <!-- ordered list of state -->
-  <ol> 
+  <ol>
       <li *ngFor="let state of states"> {{state}} </li>
       </ol>
-  
+
 
 <br><br><br><br>
 <h1>DEMO3</h1>
       <!-- Demo - 3  -->
-      <select (change)="changeVal()" [(ngModel)]="selectedState"> 
+      <select (change)="changeVal()" [(ngModel)]="selectedStates">
 
-        <option *ngFor="let state of states"> {{state}} </option> 
-        
+        <option *ngFor="let state of states"> {{state}} </option>
+
         </select>
-        {{stateCode}}
+        {{statesCode}}
 
 
         <br><br><br><br>
         <h1>DEMO4</h1>
-        <!-- Demo - 4  --> 
+        <!-- Demo - 4  -->
+
+        <select (change)="changeValue()" [(ngModel)]="selectedStates">
+
+          <option *ngFor="let state of states"> {{state}} </option>
+
+          </select>
+          {{statesCode}}
 
 
-        
-        
-         
-        
-        
-        
-           
-        
-       
-        
-       
-        
-        
-        
-        
+          <select>
+
+              <option *ngFor="let city of selectedCities"> {{city}} </option>
+
+              </select>
+
+
+              <!-- practice-demo-4 -->
+              <h1>Practice Demo-4</h1>
+              <select (change)="changeState()" [(ngModel)]="usselectedstates">
+                <option *ngFor="let state of usstates"> {{state}} </option>
+                </select>
+                {{usstatecode}}
+
+              <select>
+
+              <option *ngFor="let uscity of usselectedCities"> {{uscity}} </option>
+
+              </select>
+
+
+              <!-- Demo-5 -->
+              <h1>Demo-5</h1>
+
+<!-- roll no {{student.rollNo}}
+<br>
+name
+{{student.name}}
+<br>
+gender
+{{student.gender}}
+<br>
+sem
+{{student.sem}}
+<br>
+marks
+{{student.marks}}
+<br><br><br><br> -->
+
+<!-- Demo-6 -->
+ <h1>Demo-6</h1>
+<!--<input type="number" [(ngModel)]="student.rollNo">
+
+<input type="radio" value="M" [(ngModel)]="student.gender"> male
+<input type="radio" value="F" [(ngModel)]="student.gender"> female
+<input type="radio" value="O" [(ngModel)]="student.gender"> other
+
+
+<br>
+
+roll no {{student.rollNo}}
+<br>
+name
+{{student.name}}
+<br>
+gender
+{{student.gender}}
+<br>
+sem
+{{student.sem}}
+<br>
+marks
+{{student.marks}}
+<br><br><br><br> -->
+<!-- Demo-7 -->
+ <h1>Demo-7</h1>
+<!--roll no {{student.rollNo}}
+<br>
+name
+{{student.name}}
+<br>
+gender
+{{student.gender}}
+<br>
+sem
+{{student.sem}}
+<br>
+marks
+{{student.marks}}
+
+<br>
+
+<br>
+
+
+<p> student 1 details </p>
+
+
+
+roll no {{student1.rollNo}}
+<br>
+name
+{{student1.name}}
+<br>
+gender
+{{student1.gender}}
+<br>
+sem
+{{student1.sem}}
+<br>
+marks
+{{student1.marks}}
+ -->
+
+<!-- Demo-8 -->
+ <h1>Demo-8</h1>
+<!--<table>
+
+  <tr>
+      <td> Roll no </td>
+      <td> Gender </td>
+      <td> Name </td>
+      <td> Marks </td>
+      <td> Sem </td>
+
+  </tr>
+
+
+  <tr *ngFor="let student of students">
+      <td> {{student.rollNo}} </td>
+      <td> {{student.gender}} </td>
+      <td> {{student.name}} </td>
+      <td> {{student.marks}} </td>
+      <td> {{student.sem}} </td>
+
+  </tr>
+
+
+</table> -->
+
+<!-- Demo-9 -->
+<!-- <h1>Demo-9</h1>
+<p>  add student  </p>
+<label> roll no</label>
+<input type="text" [(ngModel)]="student.rollNo" >
+
+
+<label> gender </label>
+<input type="text" [(ngModel)]="student.gender" >
+
+<label> sem</label>
+<input type="text" [(ngModel)]="student.sem" >
+
+<label> name</label>
+<input type="text" [(ngModel)]="student.name" >
+
+<label> marks</label>
+<input type="text" [(ngModel)]="student.marks" >
+
+
+<button (click)="addStudent(student)"> add student</button>
+
+
+<p>  result   </p>
+
+<table>
+
+    <tr>
+        <td> Roll no </td>
+        <td> Gender </td>
+        <td> Name </td>
+        <td> Marks </td>
+        <td> Sem </td>
+
+    </tr>
+
+
+    <tr *ngFor="let student of students">
+        <td> {{student.rollNo}} </td>
+        <td> {{student.gender}} </td>
+        <td> {{student.name}} </td>
+        <td> {{student.marks}} </td>
+        <td> {{student.sem}} </td>
+
+    </tr>
+
+
+</table> -->
+<br><br><br><br>
+
+<!-- Demo-10 -->
+ <h1>Demo-10</h1>
+ <app-address> </app-address>
+<app-address city="mysore"> </app-address>
+<p> new addr comp </p>
+<app-address city="mumbai" state="maharastra"> </app-address>
+<br><br><br><br>
+
+
+<!-- Demo-11 -->
+<h1>Demo-11</h1>
+<input type="checkbox" name="skills" [(ngModel)]="skills[0]" >{{checkVals[0]}}
+<input type="checkbox"  name="skills" [(ngModel)]="skills[1]" >{{checkVals[1]}}
+<input type="checkbox"  name="skills" [(ngModel)]="skills[2]" >{{checkVals[2]}}
+<button (click)="showVal()"> show value</button>
+<p *ngFor ="let res of result">{{res}}</p>
+
+
+<!-- Assignment-2 -->
+<h1>Assignment-2</h1>
+
+
+
+  <div class="container">
+  <h1>Assignment- 2</h1>
+  <label for="">UserName</label>
+  <input type="text"   [(ngModel)]='user.userName'>
+  <br>
+  <br>
+  <label for="">Password</label>
+  <input type="text"  [(ngModel)]='user.password'>
+  <br>
+  <br>
+  <label for="">Confirm Password</label>
+  <input type="text"  [(ngModel)]='user.confirmpassword'>
+  <br>
+  <br>
+  <label for="">Email</label>
+  <input type="text"   [(ngModel)]='user.email'>
+  <br>
+  <br>
+  <label for="">Gender</label>
+  <input type="text"   [(ngModel)]="user.gender">
+  <br>
+  <br>
+  <label for="">DATE OF BIRTH</label>
+  <input type="date" id="birthday"   [(ngModel)]='user.dob'>
+  <br>
+  <br>
+  <label for="">Contact Number</label>
+  <input type="text" [(ngModel)]='user.contactnumber'>
+  <br>
+  <br>
+  
+  <select class="" name="" >
+    <option value="">Chennai</option>
+      <option value="">Mumbai</option>
+  </select>
+  <br>
+  <br>
+  <p>  result   </p>
+ 
+<table>
+
+    <tr>
+        <td> userName  </td>
+        <td> password </td>
+        <td> confirmpassword </td>
+        <td> email </td>
+        <td> gender </td>
+        <td> dob </td>
+        <td> contactnumber </td>
+    </tr>
+    <button (click)="addUser(user)"> add User</button>
+
+    <tr *ngFor="let user of users">
+        <td> {{user.userName}} </td>
+        <td> {{user.password}} </td>
+        <td> {{user.confirmpassword}} </td>
+        <td> {{user.email}} </td>
+        <td> {{user.gender}} </td>
+        <td> {{user.dob}} </td>
+        <td> {{user.contactnumber}} </td>
+    </tr>
+
+
+</table> -->
+  <!-- <div class="skill-container"> -->
+
+
+  <!-- <label for="">Skills</label>
+  <br>
+  <input type="radio" id="html" name="" value="">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="html" name="" value="">
+  <label for="html">CSS</label><br>
+  <input type="radio" id="html" name="" value="">
+  <label for="html">JS</label><br>
+  <input type="radio" id="html" name="" value="">
+  <label for="html">TS</label><br>
+  <input type="radio" id="html" name="" value="">
+  <label for="html">BS</label><br>
+  <input type="radio" id="html" name="" value="">
+  <label for="html">Spring</label><br>
+  <input type="radio" id="html" name="" value="">
+  <label for="html">Java</label><br>
+  <input type="radio" id="html" name="" value="">
+  <label for="html">Springboot</label><br>
+  </div> -->
+ 
+  </div>
+  
+
+  <br>
+  <br>
+  <br>

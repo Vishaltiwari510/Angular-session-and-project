@@ -1,0 +1,27 @@
+
+<form>
+    <div class="form-group">
+      <label >Search News</label>
+      <input type="text" class="form-control" placeholder="Enter Keyword" [(ngModel)]="search" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="col text-center">
+      <button type="button" class="btn btn-primary" (click)="searchNews()">Submit</button>
+    </div>
+</form>
+    
+ 
+
+<div class="container " >
+    <div class="row " >
+    <div class='col-sm-4'  *ngFor="let article of articles">
+    <div class="card">
+        <img class="card-img-top" [src]="article.urlToImage"  alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{article.title}}</h5>
+          <p class="card-text">{{article.description}}</p>
+          <a target="_blank" [href]="article.url" class="btn btn-primary">read more</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>

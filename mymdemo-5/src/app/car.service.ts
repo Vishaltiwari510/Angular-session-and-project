@@ -7,7 +7,7 @@ import { Car } from 'src/Car';
 })
 export class CarService {
 
-  constructor(private http:HttpClient) { }
+  constructor(public http:HttpClient) { }
 
 
   getCars()
@@ -29,5 +29,19 @@ export class CarService {
 
     return this.http.delete(`http://localhost:3000/cars/${id}`);
   }
+
+
+  searchCarById(id:number)
+  {
+
+    return this.http.get<Car>(`http://localhost:3000/cars/${id}`);
+  }
+
+  updateCar(id:number,car:Car)
+  {
+
+    return this.http.put<Car>(`http://localhost:3000/cars/${id}`,car);
+  }
+
 }
 

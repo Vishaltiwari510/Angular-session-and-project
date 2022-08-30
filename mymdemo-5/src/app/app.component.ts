@@ -79,5 +79,51 @@ this.carService.deleteCar(id).subscribe(
 
 
 
+
+
+
+searchId:number=0;
+
+carSearch=new Car();
+isVisible=false;
+searchData()
+{
+
+  this.carService.searchCarById(this.searchId).subscribe(
+
+    data=>{
+
+this.carSearch=data;
+this.isVisible=true;    
+},
+    error=>{
+      console.log(error)
+    alert('data not found')
+    }
+
+  )
+}
+
+
+
+
+
+updateCar()
+{
+
+  this.carService.updateCar(this.searchId,this.carSearch).subscribe(
+data=>{
+  alert('book details updated')
+  this.getCars();
+},
+error=>{
+  console.log(error)
+}
+
+  )
+}
+
+
+
 }
 

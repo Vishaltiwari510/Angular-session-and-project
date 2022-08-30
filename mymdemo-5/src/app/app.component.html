@@ -30,3 +30,37 @@
 <input type="text" [(ngModel)]="car.color" placeholder="colour">
 
 <button (click)="addCar()"> add car </button>
+
+
+<br>
+<br>
+<p> below is search</p>
+<!--  search by id  -->
+
+
+<input type="text" [(ngModel)]="searchId">
+<button (click)="searchData()"> search</button> 
+
+
+<p> data</p>
+
+<div *ngIf="isVisible"> 
+
+  id: 
+{{carSearch.id}}
+<label> title</label>
+<input type="text" [(ngModel)]="carSearch.name" placeholder="name"> 
+
+<label> isbn</label>
+<input type="text" [(ngModel)]="carSearch.maker" placeholder="maker"> 
+
+color:
+<input type="text" [(ngModel)]="carSearch.color" placeholder="color"> 
+
+
+
+<button (click)="updateCar()"> update book </button>
+
+
+
+</div>          

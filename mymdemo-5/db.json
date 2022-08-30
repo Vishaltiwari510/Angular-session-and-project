@@ -1,27 +1,33 @@
 {
   "cars": [
     {
-      "id": 2,
-      "name": "thar",
-      "maker": "mahindra",
-      "color": "green"
-    },
-    {
-      "id": "1",
-      "name": "hondacity",
-      "maker": "honda",
-      "color": "darkred"
-    },
-    {
       "id": "3",
       "name": "Fortuner",
-      "maker": "tata",
+      "maker": "mahindra",
       "color": "black"
     },
     {
       "id": "4",
       "name": "scorpio",
       "maker": "mahindra",
+      "color": "white"
+    },
+    {
+      "id": "5",
+      "name": "Rolls Royce",
+      "maker": "Rolls",
+      "color": "Grey"
+    },
+    {
+      "id": "6",
+      "name": "vitara",
+      "maker": "breza",
+      "color": "red"
+    },
+    {
+      "id": "7",
+      "name": "ferrari",
+      "maker": "ferrari king",
       "color": "white"
     }
   ]

@@ -11,6 +11,9 @@ import { HeadlineComponent } from './headline/headline.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
+import { TrendinggifComponent } from './trendinggif/trendinggif.component';
+import { SearchgifComponent } from './searchgif/searchgif.component';
+import { CalorietrackerComponent } from './calorietracker/calorietracker.component';
 
 
 @NgModule({
@@ -23,6 +26,9 @@ import { FormsModule } from '@angular/forms';
     HeadlineComponent,
     HeaderComponent,
     SearchComponent,
+    TrendinggifComponent,
+    SearchgifComponent,
+    CalorietrackerComponent,
     
   ],
   imports: [

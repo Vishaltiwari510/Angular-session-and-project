@@ -1,0 +1,77 @@
+
+
+<!-- <input type="text" [(ngModel)]="searchcal">
+<button  (click)="getnutrient()">Search cal</button> -->
+
+
+<form>
+    <div class="form-group">
+      <label >Search Nutrient</label>
+      <input type="text" class="form-control" placeholder="Enter Keyword" [(ngModel)]="searchcal" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="col text-center">
+      <button type="button" class="btn btn-primary" (click)="getnutrient()">Submit</button>
+    </div>
+</form>
+<!-- <div *ngFor="let cal of items">
+    calorie:
+    {{cal.calories}}
+    carbohydrates:
+    {{cal.carbohydrates_total_g}}
+    cholestrol:
+    {{cal.cholesterol_mg}}
+    saturated fat:
+    {{cal.fat_saturated_g}}
+    total fat:
+    {{cal.fat_total_g}}
+    fiber:
+    {{cal.fiber_g}}
+    name:
+    {{cal.name}}
+    potassium:
+    {{cal.potassium_mg}}
+    protein:
+    {{cal.protein_g}}
+    serving size:
+    {{cal.serving_size_g}}
+    sodium:
+    {{cal.sodium_mg}}
+    sugar:
+    {{cal.sugar_g}}
+    </div> -->
+
+
+    <div class="container " >
+        <div class="row " >
+        <div class='col-sm-4'  *ngFor="let cal of items">
+        <div class="card">
+           
+            <div class="card-body">
+              <h5 class="card-title">{{cal.name}}</h5>
+              <p class="card-text"> calorie:
+                {{cal.calories}}</p>
+              <p class="card-text"> carbohydrates:
+                {{cal.carbohydrates_total_g}}</p>
+              <p class="card-text"> cholestrol:
+                {{cal.cholesterol_mg}}</p>
+              <p class="card-text"> saturated fat:
+                {{cal.fat_saturated_g}}</p>
+              <p class="card-text">total fat:
+                {{cal.fat_total_g}}</p>
+              <p class="card-text">fiber:
+                {{cal.fiber_g}}</p>
+              <p class="card-text">potassium:
+                {{cal.potassium_mg}}</p>
+              <p class="card-text"> protein:
+                {{cal.protein_g}}</p>
+              <p class="card-text"> serving size:
+                {{cal.serving_size_g}}</p>
+              <p class="card-text">sodium:
+                {{cal.sodium_mg}}</p>
+              <p class="card-text">sugar:
+                {{cal.sugar_g}}</p>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>

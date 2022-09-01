@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
+
 @Injectable({
   providedIn: 'root'
 })
@@ -46,7 +47,20 @@ export class NewsService {
     return this.http.get('https://newsapi.org/v2/everything?q='+query+'&apiKey=14bc0f7ff7ea47daaa0c9594eb84f120');
   }
 
+trendingGif(){
+  return this.http.get('https://api.giphy.com/v1/gifs/trending?api_key=Q4TL2DFQzn97kZXPSl9toInJhMRs59DF');
+}
 
+
+searchGif(search:String){
+  return this.http.get('https://api.giphy.com/v1/gifs/search?api_key=Q4TL2DFQzn97kZXPSl9toInJhMRs59DF&q='+search+'');
+}
+
+
+getCalory(searchcal:String){
+ let headers= new HttpHeaders().set('x-api-key', 'll9bhyPFi+RDtjvznZVTOw==YTjCAjFUOYsHZHiF');
+  return this.http.get('https://api.calorieninjas.com/v1/nutrition?query='+searchcal+'', {headers});
+}
 
 
 }

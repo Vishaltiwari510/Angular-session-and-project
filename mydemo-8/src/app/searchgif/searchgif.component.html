@@ -1,0 +1,12 @@
+
+
+<input type="text" [(ngModel)]="search">
+<button (click)="getSearchGif()">Search Gif</button>
+
+
+<div *ngFor="let gif of gifs">
+
+
+    <img [src]="gif" height="200px" width="200px">
+    </div>
+    

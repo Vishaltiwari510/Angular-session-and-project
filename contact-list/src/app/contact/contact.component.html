@@ -1,0 +1,28 @@
+
+   
+
+<input type="text" [(ngModel)]="contact.name" placeholder="name"> 
+
+<input type="text" [(ngModel)]="contact.mobile" placeholder="mobile"> 
+
+
+<button  class="btn btn-primary"  (click)="addContact()"  routerLink="/contact">add book</button>
+
+
+  <br><br><br>  
+   
+   
+
+
+<table class="table table-dark" width="80%" border="2px">
+
+
+    <tr> 
+  <td> name </td>
+  <td> mobile </td>
+    </tr> 
+<tr *ngFor="let contact of contacts"> 
+    <td> {{contact.name}} </td>
+    <td> {{contact.mobile}} </td>
+</tr> 
+</table>
